@@ -1,0 +1,37 @@
+a {
+    color: purple;
+}
+
+
+.main-link {
+    color: green;
+}
+
+
+.berries-list {
+    list-style-type: square;
+}
+
+.fruits-list {
+    list-style-type: none;
+}
+
+
+.vegetables-list {
+    list-style-type: disclosure-open; 
+}
+
+
+.berries-list a {
+    text-decoration: none;
+}
+
+.different-list  {
+    color: rgb(45, 45, 45);
+    text-decoration: none;
+}
+
+
+ol {
+    list-style-position: inside;
+}

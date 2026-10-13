@@ -1,0 +1,60 @@
+/* 1. Курсивність, жирність, підкреслення лише для span усередині p з класом .text-background */
+p.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 2. Колір фону – жовтий лише для span усередині p.text-background, які в div */
+div p.text-background span {
+    background-color: yellow;
+}
+
+/* 3. Колір фону – сірий, текст перекреслений лише для span усередині інших span */
+span span {
+    background-color: rgb(50, 48, 48);
+    text-decoration: line-through;
+}
+
+/* 4. Розмір шрифту 18px, верхній регістр лише для span усередині span, які в нумерованому списку ol */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 5. Тінь тексту та відступ першого рядка 50px лише для абзаців на першому рівні вкладеності в section */
+section > p {
+    text-shadow: 3px 3px 5px rgba(253, 8, 8, 0.4);
+    text-indent: 50px;
+}
+
+/* 6. Замінити маркер списку на зображення лише для ul, розташованих безпосередньо в li */
+li > ul {
+    list-style-type: disclosure-open; /* або list-style-image: url('marker.png'); */
+}
+
+/* 7. Інтервал між словами 50px лише для абзаців з класом .text-background на першому рівні вкладеності в div */
+div > p.text-background {
+    word-spacing: 50px;
+}
+
+/* 8. Жирність лише для абзаців на першому рівні вкладеності в div з класом .text-bold (або у вашому блоці «Різне») */
+div.bold > p, div.text-bold > p {
+    font-weight: bold;
+}
+
+/* 9. Міжрядковий інтервал 45px для абзаців на першому рівні вкладеності в section, яка є прямим нащадком div з відповідним класом */
+div.bold > section > p, div.text-bold > section > p {
+    line-height: 45px;
+}
+
+/* 10. Колір фону – коричневий для абзаців, розташованих одразу за img */
+img + p {
+    background-color: brown;
+    color: white;
+}
+
+/* 11. Колір тексту – червоний для абзаців, розташованих після section на тому ж рівні вкладеності */
+section ~ p {
+    color: red;
+}
