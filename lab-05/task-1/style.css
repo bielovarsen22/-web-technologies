@@ -1,0 +1,112 @@
+/* 1. Загальний контейнер (div) */
+div.container {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+/* 2. Заголовок 1-го рівня (h1) */
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* 3. Загальні вимоги для списків */
+ul {
+    list-style-type: none; /* прибираємо стандартні крапки */
+}
+
+/* Обгортка списку 1-го рівня */
+ul.level-1 {
+    background-color: rgb(103, 158, 128);
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* Обгортка списку 2-го рівня */
+ul.level-2 {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+    padding-left: 0px;
+}
+
+/* 4. Елементи 1-го рівня (лівий маркер-іконка чекліста вирівняний по верху) */
+ul.level-1 > li {
+    background-repeat: no-repeat;
+    background-position: left 5px;   /* іконка чекліста на рівні верхньої частини тексту */
+    background-size: 40px 40px;
+    padding-left: 45px;               /* відступ зліва, щоб текст не наїжджав на іконку */
+    margin-bottom: 15px;
+    
+}
+
+/* 5. Елементи 2-го рівня (інші іконки для підпунктів) */
+ul.level-2 > li {
+    background-repeat: no-repeat;
+    background-position: left center; /* іконки для підпунктів по центру */
+    background-size: 35px 35px;
+    padding-left: 40px;               /* відступ для підпунктів */
+    margin-bottom: 10px;
+    background-color: rgb(153, 180, 102);
+}
+
+/* 6. Елементи span 1-го рівня */
+ul.level-1 > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* 7. Елементи span 2-го рівня */
+ul.level-2 li span {
+    background-color: rgb(218, 106, 32);
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 0px;
+}
+
+/* ==========================================
+   КЛАСИ ІКОНОК (з папки img_icons)
+   ========================================== */
+
+.icon-checklist {
+    background-image: url('img_icons/checklist.png');
+}
+
+.icon-phone {
+    background-image: url('img_icons/phone.png');
+}
+
+.icon-plane {
+    background-image: url('img_icons/airplane_ticket.png');
+}
+
+.icon-hotel {
+    background-image: url('img_icons/hotel.png');
+}
+
+.icon-car {
+    background-image: url('img_icons/car_rental.png');
+}
+
+.icon-bar {
+    background-image: url('img_icons/wine_bar.png');
+}
+
+.icon-casino {
+    background-image: url('img_icons/casino.png');
+}
+
+.icon-museum {
+    background-image: url('img_icons/museum.png');
+}
+
+.icon-festival {
+    background-image: url('img_icons/festival.png');
+}

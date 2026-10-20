@@ -1,0 +1,167 @@
+/* ====================================================
+   1. ФОН СТОРІНКИ (body)
+==================================================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Запасний колір фону, поки вантажиться картинка */
+    background-color: #1b2a41; 
+    background-image: url('img/1647608402_1-amiel-club-p-krasivie-vdokhnovlyayushchie-kartinki-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* Нерухомий фон під час прокручування всієї сторінки */
+    background-attachment: fixed;
+}
+
+/* ====================================================
+   2. КОНТЕЙНЕР (main)
+==================================================== */
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 40px auto;
+    padding: 20px;
+    /* Напівпрозорий білий фон для видимості фону сторінки */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+  ПОЯСНЕННЯ ЩОДО min-width: 320px У КОНТЕЙНЕРІ:
+  Коли вікно браузера стає вужчим за 320px, контейнер перестає 
+  зменшуватися та зберігає фіксовану ширину 320px. В результаті у вікні 
+  браузера з'являється горизонтальна смуга прокрутки (horizontal scrollbar).
+*/
+
+section {
+    margin-bottom: 30px;
+}
+
+/* ====================================================
+   3. БЛОК «ТЕГИ» (display)
+==================================================== */
+/* Елементи div, перетворені на рядкові (display: inline) */
+.inline-div {
+    display: inline;
+    width: 200px;  /* Не діє! */
+    height: 100px; /* Не діє! */
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+/* 
+  ПОЯСНЕННЯ ЗГІДНО З ВИМОГАМИ:
+  Значення width та height не діють на рядкові елементи (display: inline), 
+  оскільки inline-елементи займають лише стільки місця, скільки необхідно 
+  для їхнього текстового вмісту, і не створюють власних блокових меж.
+*/
+
+/* Елементи span, перетворені на блокові (display: block) */
+.block-span {
+    display: block;
+    width: 150px;
+    background-color: #27ae60;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+}
+/* Вони виводяться стовпцем і width: 150px для них успішно працює! */
+
+/* ====================================================
+   4. БЛОК «ПОВТОРЕННЯ ФОНУ» (background-repeat)
+==================================================== */
+.repeat-box {
+    height: 200px;
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    background-image: url('img/images.jpeg'); /* Маленька картинка ~60x60px */
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.repeat-x {
+    background-repeat: repeat-x;
+}
+
+.repeat-y {
+    background-repeat: repeat-y;
+}
+
+.repeat-space {
+    background-repeat: space;
+}
+
+.repeat-round {
+    background-repeat: round;
+}
+
+/* 
+  РІЗНИЦЯ МІЖ space ТА round:
+  - space: Повторює фонове зображення стільки разів, скільки воно вміщується без 
+    обрізання, а залишок вільного простору РІВНОМІРНО РОЗПОДІЛЯЄТЬСЯ між картинками.
+  - round: Масштабує (розтягує або стискає) фонове зображення так, щоб воно повністю 
+    і без залишку заповнило увесь блок цілою кількістю повторень без порожніх проміжків.
+*/
+
+/* ====================================================
+   5. БЛОК «МАШТАБУВАННЯ» (background-size)
+==================================================== */
+.size-box {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #2c3e50;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-image: url('img/stock-photo-traditional-rowing-boat-on-a-lake-in-the-alps-in-fall.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.size-contain {
+    background-size: contain; /* Масштабує зображення так, щоб воно повністю вмістилося у блок без обрізання */
+}
+
+.size-cover {
+    background-size: cover; /* Масштабує зображення так, щоб воно повністю покрило увесь блок (можливе обрізання країв) */
+}
+
+/* ====================================================
+   6. БЛОК «ПРОКРУЧУВАННЯ ФОНУ» (background-attachment)
+==================================================== */
+.attach-box {
+    max-height: 150px;
+    overflow: auto;
+    border: 2px solid #8e44ad;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-image: url('img/1362775166.jpg');
+    background-repeat: repeat;
+}
+
+.attach-scroll {
+    background-attachment: scroll;
+}
+
+.attach-local {
+    background-attachment: local;
+}
+
+/* 
+  ПОЯСНЕННЯ ВІДМІННОСТІ МІЖ scroll ТА local ПРИ СКРОЛІ ВСЕРЕДИНІ БЛОКУ:
+  - scroll: Фон прикріплений до самого контейнера (рамки блоку). При прокручуванні 
+    тексту всередині блоку з overflow: auto, фон залишається НЕРУХОМИМ.
+  - local: Фон прикріплений до самого вмісту (тексту). При прокручуванні тексту 
+    всередині блоку фон ПРОКРУЧУЄТЬСЯ РАЗОМ ІЗ ТЕКСТОМ.
+*/

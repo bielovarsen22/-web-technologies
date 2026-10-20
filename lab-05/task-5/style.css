@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* ====================================================
+   ЧАСТИНА 1: box-sizing
+==================================================== */
+body > div:nth-of-type(1),
+body > div:nth-of-type(2) {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2980b9;
+    background-color: #ebf5fb;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 20px 20px 0;
+    box-sizing: content-box; /* Перший блок за замовчуванням */
+}
+
+/* Перший блок (content-box): ширина збільшується за рахунок padding та border */
+div:nth-of-type(1) {
+    box-sizing: content-box; 
+    /* Загальна ширина: 300 + 40 (padding) + 10 (border) = 350px */
+}
+
+/* Другий блок (border-box): ширина включає padding та border */
+div:nth-of-type(2) {
+    box-sizing: border-box; 
+    /* Загальна ширина: рівно 300px */
+    background-color: #d4e6f1;
+    border-color: #1b4f72;
+}
+
+/* ====================================================
+   ЧАСТИНА 2: overflow
+==================================================== */
+body > div:nth-of-type(n+3):nth-of-type(-n+6) {
+    width: 220px;
+    border: 2px solid #e74c3c;
+    background-color: #fdedec;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Перші два блоки (visible та hidden) — розтягуються за висотою */
+body > div:nth-of-type(3),
+body > div:nth-of-type(4) {
+    min-height: 80px;
+    height: auto;
+}
+
+/* Останні два блоки (scroll та auto) — мають фіксовану максимальну висоту для прокрутки */
+body > div:nth-of-type(5),
+body > div:nth-of-type(6) {
+    max-height: 110px;
+}
+
+/* 1. overflow: visible */
+div:nth-of-type(3) {
+    overflow: visible;
+}
+
+/* 2. overflow: hidden */
+div:nth-of-type(4) {
+    overflow: hidden;
+}
+
+/* 3. overflow: scroll */
+div:nth-of-type(5) {
+    overflow: scroll;
+}
+
+/* 4. overflow: auto */
+div:nth-of-type(6) {
+    overflow: auto;
+}
+
+/* ====================================================
+   ЧАСТИНА 3: display (Горизонтальне меню)
+==================================================== */
+ul {
+    list-style-type: none; /* Приховати маркери списку */
+    padding: 0;
+    margin: 0;
+    background-color: #2c3e50;
+    border-radius: 4px;
+}
+
+li {
+    display: inline-block; /* Елементи li в ряд без використання float та flex */
+}
+
+a {
+    display: block; /* Елементи a як блокові всередині inline-block */
+    padding: 10px 20px; /* Внутрішні відступи */
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+a:hover {
+    background-color: #34495e;
+}
+
+/* Приховуємо один із пунктів меню за допомогою display: none 
+   
+   ВІДМІННІСТЬ display: none ВІД ІНШИХ СПОСОБІВ:
+   - display: none повністю видаляє елемент з потоку документа (DOM-дерева візуально), 
+     він не займає жодного простору на сторінці (сусідні елементи зсуваються).
+   - На відміну від нього, visibility: hidden приховує елемент, але він ПРОДОВЖУЄ 
+     занімати свій початковий простір (створює "порожнє місце").
+   - На відміну від opacity: 0, елемент залишається повністю невидимим, але також 
+     продовжує реагувати на події миші (кліки), тоді як display: none повністю вимикає взаємодію.
+*/
+li:nth-child(5) {
+    display: none;
+}

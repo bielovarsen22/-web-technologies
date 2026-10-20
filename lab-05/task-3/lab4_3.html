@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Дизайн анкети користувача</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 align="center">Анкета користувача</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <!-- БЛОК 1: Особисті дані -->
+        <fieldset>
+            <legend>Особисті дані</legend>
+
+            <p>
+                <label for="fullname">Повне ім'я:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Введіть ваше ім'я та прізвище" required tabindex="1" value="">
+            </p>
+
+            <p>
+                <label for="password">Пароль (6 символів, містить велику, малу літеру та цифру):</label><br>
+                <input type="password" id="password" name="password" placeholder="Введіть пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required tabindex="2" value="">
+            </p>
+
+            <p>
+                <label for="email">Електронна пошта:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required tabindex="3" value="">
+            </p>
+
+            <p>
+                <label for="phone">Мобільний номер:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" pattern="\+380\d{9}" required tabindex="4" value="">
+            </p>
+
+            <p>
+                <label for="birthdate">Дата народження:</label><br>
+                <input type="date" id="birthdate" name="birthdate" tabindex="5" value="">
+            </p>
+        </fieldset>
+
+        <br>
+
+        <!-- БЛОК 2: Додаткова інформація та вибори -->
+        <fieldset>
+            <legend>Додаткова інформація</legend>
+
+            <p>Стать:</p>
+            <p>
+                <input type="radio" id="gender_m" name="gender" value="male" tabindex="6">
+                <label for="gender_m">Чоловіча</label><br>
+                <input type="radio" id="gender_f" name="gender" value="female" tabindex="7">
+                <label for="gender_f">Жіноча</label><br>
+                <input type="radio" id="gender_o" name="gender" value="other" tabindex="8">
+                <label for="gender_o">Інше</label>
+            </p>
+
+            <p>Рівень досвіду:</p>
+            <p>
+                <input type="radio" id="exp_jun" name="experience" value="junior" checked tabindex="9">
+                <label for="exp_jun">Початківець</label><br>
+                <input type="radio" id="exp_mid" name="experience" value="middle" tabindex="10">
+                <label for="exp_mid">Середній</label><br>
+                <input type="radio" id="exp_sen" name="experience" value="senior" tabindex="11">
+                <label for="exp_sen">Професіонал</label>
+            </p>
+
+            <p>Мови програмування, якими володієте:</p>
+            <p>
+                <input type="checkbox" id="lang_js" name="skills" value="js" tabindex="12">
+                <label for="lang_js">JavaScript</label><br>
+                <input type="checkbox" id="lang_py" name="skills" value="python" tabindex="13">
+                <label for="lang_py">Python</label><br>
+                <input type="checkbox" id="lang_cpp" name="skills" value="cpp" tabindex="14">
+                <label for="lang_cpp">C++</label><br>
+                <input type="checkbox" id="lang_java" name="skills" value="java" tabindex="15">
+                <label for="lang_java">Java</label>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <!-- БЛОК 3: Випадні списки та списки вибору -->
+        <fieldset>
+            <legend>Списки вибору</legend>
+
+            <p>
+                <label for="rating">Оцініть якість платформи:</label><br>
+                <select id="rating" name="rating" tabindex="16">
+                    <option value="1">Жахливо</option>
+                    <option value="2">Погано</option>
+                    <option value="3" selected>Задовільно</option>
+                    <option value="4">Добре</option>
+                    <option value="5">Чудово</option>
+                    <option value="6">Неймовірно</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="hobbies">Оберіть інтереси (можна декілька):</label><br>
+                <select id="hobbies" name="hobbies" multiple tabindex="17">
+                    <option value="sport">Спорт</option>
+                    <option value="music">Музика</option>
+                    <option value="reading">Читання</option>
+                    <option value="travel">Подорожі</option>
+                    <option value="games">Ігри</option>
+                    <option value="art">Мистецтво</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="location">Оберіть локацію:</label><br>
+                <select id="location" name="location" tabindex="18">
+                    <optgroup label="Північ">
+                        <option value="kyiv">Київ</option>
+                        <option value="chernihiv">Чернігів</option>
+                        <option value="zhytomyr">Житомир</option>
+                    </optgroup>
+                    <optgroup label="Південь">
+                        <option value="odesa">Одеса</option>
+                        <option value="mykolaiv">Миколаїв</option>
+                        <option value="kherson">Херсон</option>
+                    </optgroup>
+                    <optgroup label="Захід">
+                        <option value="lviv">Львів</option>
+                        <option value="chernivtsi">Чернівці</option>
+                        <option value="uzhhorod">Ужгород</option>
+                    </optgroup>
+                    <optgroup label="Схід">
+                        <option value="kharkiv">Харків</option>
+                        <option value="dnipro">Дніпро</option>
+                        <option value="zaporizhzhia">Запоріжжя</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="browser">Улюблений браузер (можна ввести свій):</label><br>
+                <input list="browsers" id="browser" name="browser" placeholder="Почніть вводити..." tabindex="19" value="">
+                <datalist id="browsers">
+                    <option value="Google Chrome">
+                    <option value="Mozilla Firefox">
+                    <option value="Microsoft Edge">
+                    <option value="Safari">
+                    <option value="Opera">
+                </datalist>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <!-- БЛОК 4: Файли, коментарі та кнопка відправки -->
+        <fieldset>
+            <legend>Files and Comments</legend>
+
+            <p>
+                <label for="audio_files">Завантажте аудіофайли (можна декілька):</label><br>
+                <input type="file" id="audio_files" name="audio_files" accept="audio/*" multiple tabindex="20">
+            </p>
+
+            <p>
+                <label for="comments">Додаткові коментарі:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Введіть ваші побажання..." tabindex="21"></textarea>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <!-- Кнопки керування формою -->
+        <p align="center">
+            <button type="submit" tabindex="22">Відправити</button>
+            <button type="reset" tabindex="23">Очистити</button>
+        </p>
+
+    </form>
+</body>
+</html>

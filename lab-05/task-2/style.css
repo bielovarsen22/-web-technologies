@@ -1,0 +1,109 @@
+/* Основне скидання та шрифт з засічками */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+th, td {
+    padding: 16px 12px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* ----------------------------------------------------
+   ЗАГОЛОВОК ТАБЛИЦІ (thead)
+   Градієнт колонок від світлого до темного
+---------------------------------------------------- */
+
+/* Choose your plan */
+thead th:nth-child(1) {
+    background-color: #f3b4b0;
+}
+
+/* Starter 10$ */
+thead th:nth-child(2) {
+    background-color: #e38d85;
+}
+
+/* Economy 20$ */
+thead th:nth-child(3) {
+    background-color: #cb6b63;
+}
+
+/* Standard 40$ */
+thead th:nth-child(4) {
+    background-color: #983832;
+}
+
+/* Professional 60$ */
+thead th:nth-child(5) {
+    background-color: #4c1311;
+}
+
+/* ----------------------------------------------------
+   ТІЛО ТАБЛИЦІ (tbody)
+---------------------------------------------------- */
+
+/* Перша колонка у всіх рядках (Червоні назви функцій) */
+tbody td:nth-child(1) {
+    background-color: #cd5a52;
+    text-align: left;
+    padding-left: 20px;
+    color: #ffffff;
+}
+
+/* Колір знаків "+" та "-" */
+tbody td:not(:first-child) {
+    color: #555555;
+    font-size: 20px;
+}
+
+/* ----------------------------------------------------
+   КОЛЬОРИ ДЛЯ КОМІРОК ДАНИХ ПО РЯДКАХ (tr)
+---------------------------------------------------- */
+
+/* 1-й рядок (Latter remark) */
+tbody tr:nth-child(1) td:not(:first-child) {
+    background-color: #ebd0ce;
+}
+
+/* 2-й рядок (Small for ask) */
+tbody tr:nth-child(2) td:not(:first-child) {
+    background-color: #f8e5e3;
+}
+
+/* 3-й рядок (At none neat) */
+tbody tr:nth-child(3) td:not(:first-child) {
+    background-color: #ebd0ce;
+}
+
+/* 4-й рядок (Any delicate) */
+tbody tr:nth-child(4) td:not(:first-child) {
+    background-color: #f8e5e3;
+}
+
+/* 5-й рядок (To sure calm) */
+tbody tr:nth-child(5) td:not(:first-child) {
+    background-color: #ebd0ce;
+}
+
+/* Повторення кольорів для непарних/парних нових рядків (щоб додавання нових рядків не порушувало стилі) */
+tbody tr:nth-child(odd) td:not(:first-child) {
+    background-color: #e7bdba;
+}
+
+tbody tr:nth-child(even) td:not(:first-child) {
+    background-color: #f8e5e3;
+}

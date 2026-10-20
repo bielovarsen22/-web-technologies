@@ -1,0 +1,110 @@
+/* Загальний стиль сторінки та шрифту */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Стилізація заголовків */
+h1 {
+    color: #2c3e50;
+    font-family: Georgia, serif;
+    margin-bottom: 25px;
+}
+
+/* Контейнер форми */
+form {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(158, 78, 78, 0.05);
+}
+
+/* Стилізація груп полів (fieldset) */
+fieldset {
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #fafbfc;
+}
+
+/* Назви блоків (legend) */
+legend {
+    font-weight: bold;
+    color: #2980b9;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+/* Підписи до полів (label) */
+label {
+    font-weight: 600;
+    color: #34495e;
+    font-size: 14px;
+}
+
+/* Текстові поля, поштова скринька, пароль, телефони, дати та списки */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[list],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Ефект фокусу для полів введення */
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Стилі для кнопок відправки та очищення */
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+
+/* Друга кнопка (очистити) зроблена трохи іншим кольором завдяки псевдокласу */
+button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Посилання для повернення */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

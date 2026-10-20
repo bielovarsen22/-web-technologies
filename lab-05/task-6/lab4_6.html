@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 4 - Завдання 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Сайт-візитка: Демонстрація CSS властивостей</h1>
+
+        <!-- БЛОК 1: Теги (display) -->
+        <section>
+            <h2>1. Блок «Теги» (display)</h2>
+            <div class="inline-div">DIV 1</div>
+            <div class="inline-div">DIV 2</div>
+            <div class="inline-div">DIV 3</div>
+            <div class="inline-div">DIV 4</div>
+            <div class="inline-div">DIV 5</div>
+
+            <br><br>
+
+            <span class="block-span">SPAN 1</span>
+            <span class="block-span">SPAN 2</span>
+            <span class="block-span">SPAN 3</span>
+            <span class="block-span">SPAN 4</span>
+            <span class="block-span">SPAN 5</span>
+        </section>
+
+        <!-- БЛОК 2: Повторення фону (background-repeat) -->
+        <section>
+            <h2>2. Блок «Повторення фону» (background-repeat)</h2>
+            <div class="repeat-box repeat-x">repeat-x</div>
+            <div class="repeat-box repeat-y">repeat-y</div>
+            <div class="repeat-box repeat-space">space</div>
+            <div class="repeat-box repeat-round">round</div>
+        </section>
+
+        <!-- БЛОК 3: Масштабування (background-size) -->
+        <section>
+            <h2>3. Блок «Масштабування» (background-size)</h2>
+            <div class="size-box size-contain">background-size: contain</div>
+            <div class="size-box size-cover">background-size: cover</div>
+        </section>
+
+        <!-- БЛОК 4: Прокручування фону (background-attachment) -->
+        <section>
+            <h2>4. Блок «Прокручування фону» (background-attachment)</h2>
+            <div class="attach-box attach-scroll">
+                <h3>background-attachment: scroll</h3>
+                <p>Цей текст є досить довгим, щоб з'явилася смуга прокрутки всередині блоку. Заповнюємо блок декількома абзацами тексту. Лорем іпсум долор сіт амет, консектетур адіпісінг еліт. Властивість scroll означає, що фонове зображення прикріплене до самого елемента div і не прокручується разом із його вмістом при скролі всередині блоку.</p>
+                <p>Додатковий абзац для перевірки прокрутки. Скрольте вниз і спостерігайте за фоном!</p>
+            </div>
+            <div class="attach-box attach-local">
+                <h3>background-attachment: local</h3>
+                <p>Цей текст є досить довгим, щоб з'явилася смуга прокрутки всередині блоку. Заповнюємо блок декількома абзацами тексту. Лорем іпсум долор сіт амет, консектетур адіпісінг еліт. Властивість local означає, що фонове зображення прикріплене до вмісту елемента і прокручується разом із текстом при скролі всередині блоку.</p>
+                <p>Додатковий абзац для перевірки прокрутки. Скрольте вниз і спостерігайте за фоном!</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
