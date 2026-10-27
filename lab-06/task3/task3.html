@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація на курс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form class="form">
+        <h1 class="form-title">Реєстрація на курс</h1>
+        <p class="form-intro">Заповніть форму, щоб записатися на курс «Веб-технології». Поля, позначені зірочкою, обов'язкові.</p>
+
+        <div class="form-fields">
+            <!-- 1 група: Ім'я -->
+            <div class="form-group">
+                <label class="form-label form-label--required" for="firstname">Ім'я</label>
+                <input class="form-input" type="text" id="firstname" required>
+            </div>
+
+            <!-- 2 група: Прізвище -->
+            <div class="form-group">
+                <label class="form-label form-label--required" for="lastname">Прізвище</label>
+                <input class="form-input" type="text" id="lastname" required>
+            </div>
+
+            <!-- 3 група: Email -->
+            <div class="form-group">
+                <label class="form-label form-label--required" for="email">Email</label>
+                <input class="form-input" type="email" id="email" required>
+            </div>
+
+            <!-- 4 група: Телефон -->
+            <div class="form-group">
+                <label class="form-label" for="phone">Телефон</label>
+                <input class="form-input" type="tel" id="phone">
+            </div>
+
+            <!-- 5 група: Пароль -->
+            <div class="form-group">
+                <label class="form-label form-label--required" for="password">Пароль</label>
+                <input class="form-input form-input--password" type="password" id="password" required>
+            </div>
+
+            <!-- 6 група: Повторіть пароль -->
+            <div class="form-group">
+                <label class="form-label form-label--required" for="confirm-password">Повторіть пароль</label>
+                <input class="form-input form-input--password" type="password" id="confirm-password" required>
+            </div>
+        </div>
+
+        <!-- Поле для введення багаторядкового тексту (Про себе) -->
+        <div class="form-group form-group--full">
+            <label class="form-label" for="about">Про себе</label>
+            <textarea class="form-textarea" id="about"></textarea>
+        </div>
+
+        <!-- Список вимог до пароля -->
+        <ul class="form-hints">
+            <li>Не менше 8 символів</li>
+            <li>Хоча б одна цифра</li>
+            <li>Хоча б одна велика літера</li>
+            <li>Паролі мають збігатися</li>
+        </ul>
+
+        <!-- Правила курсу -->
+        <p class="form-rules">
+            <input type="checkbox" id="agree">
+            <label for="agree">Погоджуюсь з <a class="rules-link" href="#">правилами курсу</a></label>
+        </p>
+
+        <!-- Кнопки керування -->
+        <div class="form-buttons">
+            <button class="btn btn-reset" type="reset">Скасувати</button>
+            <button class="btn btn-submit" type="submit">Зареєструватись</button>
+        </div>
+    </form>
+
+</body>
+</html>

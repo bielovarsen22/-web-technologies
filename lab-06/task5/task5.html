@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 5 - Віджет погоди</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Головний контейнер віджета -->
+    <div class="weather-widget">
+        
+        <!-- Фоновий/нижній світлий блок з днями тижня -->
+        <div class="card card-bottom">
+            <div class="forecast-row">
+                <div class="day-col">
+                    <span class="day-name">Mon</span>
+                    <span class="day-temp">17°</span>
+                </div>
+                <div class="day-col">
+                    <span class="day-name">Tue</span>
+                    <span class="day-temp">19°</span>
+                </div>
+                <div class="day-col">
+                    <span class="day-name">Wed</span>
+                    <span class="day-temp">16°</span>
+                </div>
+                <div class="day-col">
+                    <span class="day-name">Thu</span>
+                    <span class="day-temp">18°</span>
+                </div>
+                <div class="day-col">
+                    <span class="day-name">Fri</span>
+                    <span class="day-temp">21°</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Верхній чорний квадрат з числом 17 -->
+        <div class="card card-top">
+            <div class="date-number">17°</div>
+        </div>
+
+       <!-- Блок з хмарою, що накладається поверх карток -->
+<div class="cloud-element">
+    <img src="https://pngimg.com/uploads/cloud/cloud_PNG6.png" alt="Хмара" class="cloud-img">
+</div>
+
+        <!-- Кнопки перемикання стрілочками (ліворуч) -->
+        <div class="nav-arrows">
+            <span class="arrow">&larr;</span>
+            <span class="arrow">&rarr;</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

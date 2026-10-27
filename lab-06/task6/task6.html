@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 6 - Попап</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-container">
+        <!-- Чекбокс для керування відкриттям/закриттям основного попапу -->
+        <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+        
+        <!-- Кнопка відкриття попапу (зв'язана через for і має tabindex="0") -->
+        <label for="popup-toggle" class="popup-button" tabindex="0">
+            <span class="icon-grid"></span>
+        </label>
+
+        <!-- Головний контейнер попапу -->
+        <div class="popup-window">
+            
+            <!-- Чекбокс для розширеного/scrollable стану ("More") -->
+            <input type="checkbox" id="more-toggle" class="more-checkbox">
+
+            <!-- Внутрішній прокручуваний контейнер (отримує фокус для керування стрілками) -->
+            <div class="popup-scroll-container" tabindex="0">
+                
+                <!-- Сітка іконок (первинні елементи) -->
+                <div class="popup-grid">
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon calendar-icon"></div>
+                        <span class="item-text">Calendar</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon mail-icon"></div>
+                        <span class="item-text">Mail</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon news-icon"></div>
+                        <span class="item-text">News</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon map-icon"></div>
+                        <span class="item-text">Map</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon files-icon"></div>
+                        <span class="item-text">Files</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon contacts-icon"></div>
+                        <span class="item-text">Contacts</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon translate-icon"></div>
+                        <span class="item-text">Translate</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon videos-icon"></div>
+                        <span class="item-text">Videos</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon search-icon"></div>
+                        <span class="item-text">Search</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon photo-icon"></div>
+                        <span class="item-text">Photo</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon apps-icon"></div>
+                        <span class="item-text">Apps</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon document-icon"></div>
+                        <span class="item-text">Document</span>
+                    </a>
+                </div>
+
+                <!-- Додаткові іконки (з'являються при активації "More") -->
+                <div class="popup-grid extra-grid">
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon chat-icon"></div>
+                        <span class="item-text">Chat</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon classroom-icon"></div>
+                        <span class="item-text">Classroom</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon collection-icon"></div>
+                        <span class="item-text">Collection</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon mars-icon"></div>
+                        <span class="item-text">Mars</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon blogs-icon"></div>
+                        <span class="item-text">Blogs</span>
+                    </a>
+                    <a href="#" class="grid-item" tabindex="0">
+                        <div class="item-icon promos-icon"></div>
+                        <span class="item-text">Promos</span>
+                    </a>
+                </div>
+
+                <!-- Кнопка "More" / футер попапу -->
+                <label for="more-toggle" class="popup-more-btn" tabindex="0">
+                    <span class="more-text-default">More</span>
+                    <span class="more-text-active">Even more from Kottans</span>
+                </label>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

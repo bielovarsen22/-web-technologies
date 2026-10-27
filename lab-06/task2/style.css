@@ -1,0 +1,59 @@
+/* Загальні стилі для всіх блоків */
+.block {
+    position: absolute;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: opacity 0.3s ease; /* Плавна поява */
+}
+
+/* Стилі для Блоку 1 */
+.block-1 {
+    width: 150px;
+    height: 60px;
+    background-color: #00b050; /* Зелений */
+    color: #ffffff;
+    top: 20px;
+    left: 20px;
+}
+
+/* Стилі для Блоку 2 (початково прихований) */
+.block-2 {
+    width: 180px;
+    height: 150px;
+    background-color: #4b89dc; /* Синій */
+    color: #ffffff;
+    top: 95px;
+    left: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Стилі для Блоку 3 (початково прихований) */
+.block-3 {
+    width: 220px;
+    height: 230px;
+    background-color: #6b4c9a; /* Фіолетовий */
+    color: #ffffff;
+    top: 20px;
+    left: 210px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Дія 1: При наведенні на Блок 1 — з'являється Блок 2 */
+.block-1:hover + .block-2,
+.block-2:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Дія 2: При наведенні на Блок 2 — з'являється Блок 3 */
+.block-2:hover ~ .block-3 {
+    opacity: 1;
+    visibility: visible;
+}

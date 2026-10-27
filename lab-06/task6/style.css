@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 50px;
+}
+
+/* Контейнер шапки */
+.header-container {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* Ховаємо чекбокси, але залишаємо їх доступними для фокусування */
+.popup-checkbox,
+.more-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Кнопка активації попапу (popup-button) */
+.popup-button {
+    display: inline-block;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+/* Іконка-сітка всередині кнопки */
+.icon-grid {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(circle, #555 35%, transparent 40%);
+    background-size: 6px 6px;
+    background-position: 0 0, 0 8px, 0 16px, 8px 0, 8px 8px, 8px 16px, 16px 0, 16px 8px, 16px 16px;
+}
+
+/* Інтерактивні стани для кнопки попапу */
+.popup-button:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.popup-button:focus,
+.popup-checkbox:focus + .popup-button {
+    outline: 2px solid #1a73e8;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Початковий стан попапу: прихований через visibility та display */
+.popup-window {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 320px;
+    height: 440px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #dcdcdc;
+    
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    z-index: 100;
+}
+
+/* Відображення попапу при активації чекбокса */
+.popup-checkbox:checked ~ .popup-window {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+}
+
+/* Прокручуваний контейнер всередині попапу */
+.popup-scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden; /* Початковий стан без прокрутки */
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Фокус на прокручуваному контейнері */
+.popup-scroll-container:focus {
+    box-shadow: inset 0 0 0 2px #1a73e8;
+}
+
+/* Сітка елементів */
+.popup-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10px 10px 10px;
+    justify-content: space-around;
+}
+
+/* Додаткова сітка за замовчуванням прихована */
+.extra-grid {
+    display: none;
+}
+
+/* Коли натиснуто "More", з'являється додаткова сітка та з'являється прокрутка */
+.more-checkbox:checked ~ .popup-scroll-container {
+    overflow-y: auto;
+}
+
+.more-checkbox:checked ~ .popup-scroll-container .extra-grid {
+    display: flex;
+}
+
+/* Окремий елемент сітки (іконка + текст) */
+.grid-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+/* Інтерактивні стани для елементів сітки */
+.grid-item:hover {
+    background-color: #f7f7f7;
+}
+
+.grid-item:focus {
+    outline: 2px solid #1a73e8;
+    background-color: #f0f4f8;
+}
+
+/* Стилі для іконок */
+.item-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 6px;
+}
+
+/* Текст під іконками */
+.item-text {
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+}
+
+/* Кнопка "More" / футер попапу */
+.popup-more-btn {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: background 0.2s;
+}
+
+/* Перемикання тексту кнопки More залежно від стану */
+.more-text-active {
+    display: none;
+}
+
+.more-checkbox:checked ~ .popup-scroll-container .more-text-default {
+    display: none;
+}
+
+.more-checkbox:checked ~ .popup-scroll-container .more-text-active {
+    display: inline;
+}
+
+/* Інтерактивні стани для кнопки More */
+.popup-more-btn:hover {
+    background-color: #eeeeee;
+}
+
+.popup-more-btn:focus,
+.more-checkbox:focus + .popup-scroll-container .popup-more-btn {
+    outline: 2px solid #1a73e8;
+    background-color: #eeeeee;
+}
+
+/* Заглушки-іконки для демонстрації */
+.calendar-icon { background-color: #a0c4ff; border-radius: 4px; }
+.mail-icon { background-color: #ffadad; border-radius: 4px; }
+.news-icon { background-color: #fdffb6; border-radius: 4px; }
+.map-icon { background-color: #caffbf; border-radius: 4px; }
+.files-icon { background-color: #ffd6a5; border-radius: 4px; }
+.contacts-icon { background-color: #9bf6ff; border-radius: 4px; }
+.translate-icon { background-color: #bdb2ff; border-radius: 4px; }
+.videos-icon { background-color: #ffc6ff; border-radius: 4px; }
+.search-icon { background-color: #fffffc; border-radius: 4px; border: 1px solid #ccc; }
+.photo-icon { background-color: #ffafcc; border-radius: 4px; }
+.apps-icon { background-color: #bcd4e6; border-radius: 4px; }
+.document-icon { background-color: #b8f2e6; border-radius: 4px; }
+
+.chat-icon { background-color: #ffa69e; border-radius: 4px; }
+.classroom-icon { background-color: #faf3dd; border-radius: 4px; }
+.collection-icon { background-color: #b8f2e6; border-radius: 4px; }
+.mars-icon { background-color: #ff686b; border-radius: 4px; }
+.blogs-icon { background-color: #4ecdc4; border-radius: 4px; }
+.promos-icon { background-color: #ffe66d; border-radius: 4px; }

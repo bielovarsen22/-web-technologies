@@ -1,0 +1,179 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    padding-top: 70px; /* Відступ зверху через фіксовану горизонтальну панель */
+}
+
+/* ================= ГОРИЗОНТАЛЬНА ПАНЕЛЬ ================= */
+.navbar-horizontal {
+    position: fixed; /* Фіксація у верхній частині сторінки */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    float: left; /* Розміщення в рядок */
+    position: relative;
+}
+
+/* Вирівнювання останнього пункту праворуч */
+.nav-item-right {
+    float: right;
+}
+
+.nav-item > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+/* Активний пункт меню */
+.nav-item.active > a,
+.nav-item > a:hover {
+    background-color: #4b89dc;
+}
+
+/* Випадаюче меню горизонтальної панелі */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #555;
+}
+
+/* Показ випадаючого списку при наведенні */
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+
+/* ================= ВЕРТИКАЛЬНА ПАНЕЛЬ ================= */
+.sidebar-container {
+    position: fixed;
+    top: 60px; /* Нижче горизонтальної панелі */
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 60px); /* Повна висота екрану */
+    background-color: #2c3e50;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.navbar-vertical {
+    width: 100%;
+}
+
+.vert-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vert-item {
+    position: relative;
+    border-bottom: 1px solid #34495e;
+}
+
+.vert-item > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.vert-item.active > a,
+.vert-item > a:hover {
+    background-color: #2980b9;
+}
+
+/* Випадаючі списки вертикальної панелі (2-й рівень) */
+.vert-dropdown {
+    display: none;
+    list-style: none;
+    padding: 0;
+    background-color: #34495e;
+}
+
+.vert-dropdown li {
+    position: relative;
+}
+
+.vert-dropdown li a {
+    display: block;
+    padding: 12px 20px 12px 40px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.vert-dropdown li a:hover {
+    background-color: #3d566e;
+}
+
+.vert-item:hover > .vert-dropdown {
+    display: block;
+}
+
+/* 3-й рівень вкладеності */
+.vert-dropdown-sub {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Випадає праворуч від батьківського пункту */
+    width: 180px;
+    background-color: #34495e;
+    list-style: none;
+    padding: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.vert-dropdown-sub li a {
+    padding: 12px 20px;
+}
+
+.vert-dropdown li:hover > .vert-dropdown-sub {
+    display: block;
+}
+
+
+/* Стиль для основного контенту, щоб не заходив під сайдбар */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
