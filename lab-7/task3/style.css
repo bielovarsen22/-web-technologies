@@ -1,0 +1,151 @@
+/* Основные стили страницы */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Главный контейнер виджета погоды */
+.weather-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Верхняя часть (секция текущего дня) */
+.weather-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.location-info h1 {
+    font-size: 2.5rem;
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.location-info .date, 
+.location-info .condition {
+    margin: 2px 0;
+    color: #7f8c8d;
+    font-size: 1.05rem;
+}
+
+.current-main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.weather-icon-large {
+    font-size: 3.5rem;
+    color: #95a5a6;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #34495e;
+}
+
+.temperature .unit {
+    font-size: 1.5rem;
+    vertical-align: super;
+}
+
+.weather-details {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 25px 0 10px 0;
+}
+
+/* Список дней недели (Flexbox) */
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Отдельная строка прогноза погоды на день */
+.forecast-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.forecast-item:last-child {
+    border-bottom: none;
+}
+
+/* Элементы внутри строки */
+.day-name {
+    flex: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.day-icon {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Цвета иконок */
+.sun-icon {
+    color: #f1c40f;
+}
+
+.sun-cloud {
+    color: #f39c12;
+}
+
+.rain-icon {
+    color: #3498db;
+}
+
+.rain-lightning {
+    color: #f39c12;
+}
+
+.day-temps {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.max-temp {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.min-temp {
+    color: #95a5a6;
+}
+
+.day-pollen {
+    flex: 1;
+    text-align: right;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}

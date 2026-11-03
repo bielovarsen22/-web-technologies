@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоди</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем FontAwesome для иконок погоды -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="weather-container">
+        <!-- Шапка с текущей погодой -->
+        <div class="weather-header">
+            <div class="location-info">
+                <h1>New York, NY</h1>
+                <p class="date">Tuesday, April 15th</p>
+                <p class="condition">Overcast</p>
+            </div>
+            <div class="current-main">
+                <i class="fa-solid fa-cloud weather-icon-large"></i>
+                <span class="temperature">58°<span class="unit">F</span></span>
+            </div>
+            <div class="weather-details">
+                <p>Precipitation: <strong>100%</strong></p>
+                <p>Humidity: <strong>97%</strong></p>
+                <p>Wind: <strong>4 mph SW</strong></p>
+                <p>Pollen Count: <strong>36</strong></p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Список прогноза по дням (Flexbox-контейнер) -->
+        <div class="forecast-list">
+
+            <!-- День 1: Today -->
+            <div class="forecast-item">
+                <div class="day-name">Today</div>
+                <div class="day-icon"><i class="fa-solid fa-cloud-bolt rain-lightning"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">68°</span>
+                    <span class="min-temp">36°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+            <!-- День 2: Wednesday -->
+            <div class="forecast-item">
+                <div class="day-name">Wednesday</div>
+                <div class="day-icon"><i class="fa-solid fa-sun sun-icon"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">50°</span>
+                    <span class="min-temp">39°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+            <!-- День 3: Thursday -->
+            <div class="forecast-item">
+                <div class="day-name">Thursday</div>
+                <div class="day-icon"><i class="fa-solid fa-sun sun-icon"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">55°</span>
+                    <span class="min-temp">39°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+            <!-- День 4: Friday -->
+            <div class="forecast-item">
+                <div class="day-name">Friday</div>
+                <div class="day-icon"><i class="fa-solid fa-cloud-sun sun-cloud"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">54°</span>
+                    <span class="min-temp">43°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+            <!-- День 5: Saturday -->
+            <div class="forecast-item">
+                <div class="day-name">Saturday</div>
+                <div class="day-icon"><i class="fa-solid fa-cloud-rain rain-icon"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">64°</span>
+                    <span class="min-temp">46°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+            <!-- День 6: Sunday -->
+            <div class="forecast-item">
+                <div class="day-name">Sunday</div>
+                <div class="day-icon"><i class="fa-solid fa-cloud-rain rain-icon"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">64°</span>
+                    <span class="min-temp">50°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+            <!-- День 7: Monday -->
+            <div class="forecast-item">
+                <div class="day-name">Monday</div>
+                <div class="day-icon"><i class="fa-solid fa-cloud-sun sun-cloud"></i></div>
+                <div class="day-temps">
+                    <span class="max-temp">61°</span>
+                    <span class="min-temp">50°</span>
+                </div>
+                <div class="day-pollen">Pollen 36</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
